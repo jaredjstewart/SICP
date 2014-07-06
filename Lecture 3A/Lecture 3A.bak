@@ -3,29 +3,29 @@
 ;;;Suppose we want to do arithmetic with rational numbers.
 ; Let's assume (method of 'wishful thinking') that we have some methods make-rat, numer, and denom.
 ; How could we implement rational arithmetic?
-#;(define (add-rat x y)
+(define (add-rat x y)
   (make-rat (+ (* (numer x) (denom y))
                (* (numer y) (denom x)))
             (* (denom x) (denom y))))
-#;(define (sub-rat x y)
+(define (sub-rat x y)
   (make-rat (- (* (numer x) (denom y))
                (* (numer y) (denom x)))
             (* (denom x) (denom y))))
-#;(define (mul-rat x y)
+(define (mul-rat x y)
   (make-rat (* (numer x) (numer y))
             (* (denom x) (denom y))))
-#;(define (div-rat x y)
+(define (div-rat x y)
   (make-rat (* (numer x) (denom y))
             (* (denom x) (numer y))))
 
-#;(define (equal-rat? x y)
+(define (equal-rat? x y)
   (= (* (numer x) (denom y))
      (* (numer y) (denom x))))
 
 
 ;;;How can we implement these procedures make-rat, numer, and denom?
 
-;;;;;;;;;;;;;;;;;;Definition;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;Definition;;;;;;;;;;;;;;;
 ;;;(cons x y)
 ;      constructs a pair whose first part
 ;      is x and whose second part is y
@@ -36,7 +36,7 @@
 ;
 ;;;(car (cons x y)) == x
 ;;;(cdr (cons x y)) == y
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;Representing rational numbers
 #;(define (make-rat n d)

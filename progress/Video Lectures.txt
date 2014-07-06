@@ -9,7 +9,7 @@
 	(Substitution model applied to cons, car, cdr).
 	
 3A: Henderson Escher Example
-
+	31:52 - Henderson Escher Example
 
 3B: Symbolic Differentiation; Quotation
 
